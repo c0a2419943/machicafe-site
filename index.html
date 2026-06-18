@@ -24,14 +24,29 @@
     <section id="home" class="hero panel">
       <div class="hero-text">
         <p class="badge">町田市役所 1F〜3F 開催中</p>
+        <p class="badge">📅 本日のイベント開催中</p>
+      
         <h1>探す → 見る → 行く</h1>
-        <p>出展団体・ジャンル・場所・時間からイベントを探し、マップでブースまで迷わず案内します。</p>
+      
+        <p>
+          出展団体・ジャンル・場所・時間からイベントを探し、
+          マップでブースまで迷わず案内します。
+        </p>
       </div>
       <div class="home-actions" aria-label="主要メニュー">
         <button class="home-card" data-jump="searchArea" type="button"><span>🔍</span><strong>イベントを探す</strong><small>キーワード検索</small></button>
         <button class="home-card" data-jump="eventList" type="button"><span>📋</span><strong>イベント一覧</strong><small>全ブースを見る</small></button>
         <button class="home-card" data-jump="map" type="button"><span>📍</span><strong>マップを見る</strong><small>現在地から案内</small></button>
       </div>
+    </section>
+
+    <section class="panel notice-panel">
+      <h2>📢 お知らせ</h2>
+    
+      <p>・会場は町田市役所1F〜3Fです</p>
+      <p>・入場無料です</p>
+      <p>・イベント検索や会場案内をご利用ください</p>
+      <p>・スマートフォンからも利用できます</p>
     </section>
 
     <section id="searchArea" class="panel">
@@ -74,12 +89,12 @@
             <label for="time">時間</label>
             <select id="time">
               <option value="all">すべての時間</option>
-              <option value="10">10時台</option>
-              <option value="11">11時台</option>
-              <option value="12">12時台</option>
-              <option value="13">13時台</option>
-              <option value="14">14時台</option>
-              <option value="15">15時台</option>
+              <option value="10">10時〜</option>
+              <option value="11">11時〜</option>
+              <option value="12">12時〜</option>
+              <option value="13">13時〜</option>
+              <option value="14">14時〜</option>
+              <option value="15">15時〜</option>
             </select>
           </div>
         </div>
@@ -147,5 +162,22 @@
   </nav>
 
   <script src="script.js"></script>
+
+  <section class="qr-section">
+    <h2>スマートフォンから利用できます</h2>
+  
+    <img src="QR.png" alt="QRコード">
+  
+    <p>
+      来場者はQRコードを読み取り、<br>
+      イベント検索や会場案内を利用できます。
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p><strong>まちカフェ！当日案内サイト</strong></p>
+    <p>東京工科大学 価値創造実践 Team11</p>
+  </footer>
+
 </body>
 </html>

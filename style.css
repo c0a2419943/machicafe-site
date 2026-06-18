@@ -25,3 +25,54 @@
   .pin{
     z-index:100;
   }
+
+  .qr-section{
+    text-align:center;
+    margin-top:30px;
+    padding:25px;
+    background:#ffffff;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .qr-section img{
+    width:180px;
+    height:auto;
+    margin:15px 0;
+  }
+  
+  .qr-section h2{
+    color:#0b5cad;
+    margin-bottom:10px;
+  }
+  
+  .qr-section p{
+    color:#555;
+  }
+
+  .site-footer{
+    text-align:center;
+    padding:30px 20px;
+    margin-top:30px;
+    color:#666;
+    font-size:14px;
+    border-top:1px solid #ddd;
+  }
+  
+  .site-footer p{
+    margin:5px 0;
+  }
+  .notice-panel{
+    background:#fff8e8;
+    border:2px solid #ffd58a;
+  }
+  
+  .notice-panel h2{
+    margin-top:0;
+    color:#d97a00;
+  }
+  
+  .notice-panel p{
+    margin:8px 0;
+    font-weight:700;
+  }
