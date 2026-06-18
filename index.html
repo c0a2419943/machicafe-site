@@ -83,6 +83,7 @@
             </select>
           </div>
         </div>
+
         <div class="form-actions">
           <button class="primary-btn" type="submit">検索する</button>
           <button id="resetBtn" class="sub-btn" type="button">条件をリセット</button>
@@ -96,7 +97,7 @@
     </section>
 
     <section id="map" class="panel">
-      <div class="section-title"><span class="step orange">3</span><div><h2>マップによる道案内</h2><p>選択したイベントのブースまで、ルートを表示します。</p></div></div>
+      <div class="section-title"><span class="step orange">3</span><div><h2>マップによる道案内</h2><p>選択したイベントのブースまで、マップで場所を確認できます。</p></div></div>
 
       <div class="selected-box">
         <div>
@@ -120,17 +121,21 @@
         </div>
 
         <div id="floorMap" class="floor-map">
-          <div class="room info-room">総合案内</div>
-          <div class="room elevator-room">エレベーター</div>
-          <div class="room toilet-room">トイレ</div>
-          <div class="room hall-room">ホール</div>
-          <div class="entrance">現在地<br><small>入口</small></div>
-          <svg class="route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <polyline id="routeLine" points="18,82 18,60 70,60 70,36"></polyline>
+          <img id="floorImage" src="1F.png" alt="市役所フロアマップ" class="floor-image">
+        
+          <svg class="route" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polyline id="routeLine" points="38,84 38,65 23,65 23,76"></polyline>
           </svg>
-          <div id="mapPin" class="pin">📍<span id="boothLabel">A-5</span></div>
+        
+          <div id="mapPin" class="pin">
+            📍<span id="boothLabel">A-5</span>
+          </div>
         </div>
-        <div class="route-note"><strong id="walkTime">約30秒</strong><span>青い点線に沿って進んでください。</span></div>
+
+        <div class="route-note">
+          <strong id="walkTime">約30秒</strong>
+          <span>フロアマップで目的地を確認してください。</span>
+        </div>
       </div>
     </section>
   </main>
