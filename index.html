@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>まちカフェ！当日案内サイト</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">☕</span>
+        <div>
+          <strong>まちカフェ！当日案内</strong>
+          <small>イベント検索・会場マップ</small>
+        </div>
+      </div>
+      <button id="fontBtn" class="header-btn" type="button">文字を大きく</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section id="home" class="hero panel">
+      <div class="hero-text">
+        <p class="badge">町田市役所 1F〜3F 開催中</p>
+        <h1>探す → 見る → 行く</h1>
+        <p>出展団体・ジャンル・場所・時間からイベントを探し、マップでブースまで迷わず案内します。</p>
+      </div>
+      <div class="home-actions" aria-label="主要メニュー">
+        <button class="home-card" data-jump="searchArea" type="button"><span>🔍</span><strong>イベントを探す</strong><small>キーワード検索</small></button>
+        <button class="home-card" data-jump="eventList" type="button"><span>📋</span><strong>イベント一覧</strong><small>全ブースを見る</small></button>
+        <button class="home-card" data-jump="map" type="button"><span>📍</span><strong>マップを見る</strong><small>現在地から案内</small></button>
+      </div>
+    </section>
+
+    <section id="searchArea" class="panel">
+      <div class="section-title"><span class="step green">1</span><div><h2>イベント検索</h2><p>条件を少なくして、かんたんに探せます。</p></div></div>
+      <form id="searchForm" class="search-form">
+        <label for="keyword">キーワード</label>
+        <input id="keyword" type="text" placeholder="例）スマホ、工作、健康、NPO" />
+
+        <div class="quick-chips">
+          <button type="button" data-key="スマホ">スマホ</button>
+          <button type="button" data-key="子ども">子ども</button>
+          <button type="button" data-key="防災">防災</button>
+          <button type="button" data-key="健康">健康</button>
+          <button type="button" data-key="展示">展示</button>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <label for="genre">ジャンル</label>
+            <select id="genre">
+              <option value="all">すべてのジャンル</option>
+              <option value="体験">体験</option>
+              <option value="相談会">相談会</option>
+              <option value="子ども向け">子ども向け</option>
+              <option value="展示">展示</option>
+              <option value="交流">交流</option>
+              <option value="音楽">音楽</option>
+            </select>
+          </div>
+          <div>
+            <label for="place">場所</label>
+            <select id="place">
+              <option value="all">すべての場所</option>
+              <option value="1F">市役所1F</option>
+              <option value="2F">市役所2F</option>
+              <option value="3F">市役所3F</option>
+            </select>
+          </div>
+          <div>
+            <label for="time">時間</label>
+            <select id="time">
+              <option value="all">すべての時間</option>
+              <option value="10">10時台</option>
+              <option value="11">11時台</option>
+              <option value="12">12時台</option>
+              <option value="13">13時台</option>
+              <option value="14">14時台</option>
+              <option value="15">15時台</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="primary-btn" type="submit">検索する</button>
+          <button id="resetBtn" class="sub-btn" type="button">条件をリセット</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="eventList" class="panel">
+      <div class="section-title"><span class="step blue">2</span><div><h2>イベント情報の閲覧</h2><p id="resultCount">すべてのイベントを表示しています。</p></div></div>
+      <div id="results" class="event-grid"></div>
+    </section>
+
+    <section id="map" class="panel">
+      <div class="section-title"><span class="step orange">3</span><div><h2>マップによる道案内</h2><p>選択したイベントのブースまで、ルートを表示します。</p></div></div>
+
+      <div class="selected-box">
+        <div>
+          <small>選択中</small>
+          <strong id="selectedName">NPOふれあい</strong>
+        </div>
+        <div class="selected-info">
+          <span id="selectedPlace">市役所1Fロビー（A-5）</span>
+          <span id="selectedTime">10:00 - 12:00</span>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <div class="map-head">
+          <h3 id="mapTitle">市役所1F フロアマップ</h3>
+          <div id="floorTabs" class="floor-tabs">
+            <button type="button" class="active" data-floor="1F">1F</button>
+            <button type="button" data-floor="2F">2F</button>
+            <button type="button" data-floor="3F">3F</button>
+          </div>
+        </div>
+
+        <div id="floorMap" class="floor-map">
+          <div class="room info-room">総合案内</div>
+          <div class="room elevator-room">エレベーター</div>
+          <div class="room toilet-room">トイレ</div>
+          <div class="room hall-room">ホール</div>
+          <div class="entrance">現在地<br><small>入口</small></div>
+          <svg class="route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <polyline id="routeLine" points="18,82 18,60 70,60 70,36"></polyline>
+          </svg>
+          <div id="mapPin" class="pin">📍<span id="boothLabel">A-5</span></div>
+        </div>
+        <div class="route-note"><strong id="walkTime">約30秒</strong><span>青い点線に沿って進んでください。</span></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="メニュー">
+    <a href="#searchArea">🔍<span>検索</span></a>
+    <a href="#eventList">📋<span>一覧</span></a>
+    <a href="#map">📍<span>マップ</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
