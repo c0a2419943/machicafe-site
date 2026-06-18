@@ -1,19 +1,19 @@
 const events = [
-  { name:'NPOふれあい', tag:'体験・ワークショップ', genre:'体験', time:'10:00 - 12:00', place:'市役所1Fロビー', booth:'A-5', desc:'地域の交流を目的としたワークショップを行います。', floor:'1F', x:23, y:76, walk:'約30秒' },
-  { name:'手づくり工房', tag:'販売・体験', genre:'体験', time:'10:00 - 15:00', place:'市役所1Fロビー', booth:'B-2', desc:'手作り雑貨の販売と簡単な制作体験ができます。', floor:'1F', x:76, y:46, walk:'約40秒' },
-  { name:'こども未来クラブ', tag:'子ども向け', genre:'子ども向け', time:'12:00 - 15:00', place:'市役所2F多目的室', booth:'C-1', desc:'親子で参加できる楽しいイベントです。', floor:'2F', x:22, y:35, walk:'約1分' },
-  { name:'健康サポート町田', tag:'健康相談', genre:'相談会', time:'15:00 - 17:00', place:'市役所3F研修室', booth:'D-4', desc:'健康チェックと生活相談を行います。', floor:'3F', x:72, y:23, walk:'約1分30秒' },
-  { name:'シニアスマホ相談会', tag:'相談会', genre:'相談会', time:'10:00 - 16:00', place:'市役所2F会議室B', booth:'C-7', desc:'スマートフォンの使い方を丁寧にサポートします。', floor:'2F', x:61, y:19, walk:'約1分' },
-  { name:'防災体験ブース', tag:'防災・体験', genre:'体験', time:'10:00 - 15:00', place:'市役所1F入口付近', booth:'A-1', desc:'防災グッズや避難体験ができます。', floor:'1F', x:21, y:34, walk:'約20秒' },
-  { name:'まちだ音楽クラブ', tag:'音楽', genre:'音楽', time:'13:00 - 15:00', place:'市役所3Fホール', booth:'E-2', desc:'地域の音楽グループによる演奏会です。', floor:'3F', x:52, y:20, walk:'約1分20秒' },
-  { name:'ボランティア相談会', tag:'相談会', genre:'相談会', time:'11:00 - 16:00', place:'市役所2F会議室A', booth:'C-5', desc:'地域ボランティア活動について相談できます。', floor:'2F', x:47, y:19, walk:'約55秒' },
-  { name:'環境エコ展示', tag:'展示', genre:'展示', time:'10:00 - 17:00', place:'市役所3F展示室', booth:'D-1', desc:'環境保全活動やリサイクルについて紹介します。', floor:'3F', x:77, y:46, walk:'約1分10秒' },
-  { name:'地域交流カフェ', tag:'交流', genre:'交流', time:'10:00 - 17:00', place:'市役所3F会議室', booth:'D-5', desc:'地域住民同士が気軽に交流できるカフェです。', floor:'3F', x:25, y:53, walk:'約1分' },
-  { name:'英会話サークル', tag:'学習・交流', genre:'交流', time:'13:00 - 16:00', place:'市役所2F研修室', booth:'C-8', desc:'初心者向け英会話体験レッスンを行います。', floor:'2F', x:83, y:37, walk:'約1分' },
-  { name:'子ども工作教室', tag:'子ども向け', genre:'子ども向け', time:'10:00 - 14:00', place:'市役所2F多目的室', booth:'C-2', desc:'自由工作やクラフト作りを楽しめます。', floor:'2F', x:23, y:48, walk:'約1分10秒' },
-  { name:'町田歴史研究会', tag:'展示', genre:'展示', time:'10:00 - 16:00', place:'市役所3F展示室', booth:'D-6', desc:'町田の歴史資料や写真を展示しています。', floor:'3F', x:76, y:66, walk:'約1分20秒' },
-  { name:'スポーツ体験コーナー', tag:'体験', genre:'体験', time:'11:00 - 15:00', place:'市役所3F研修室', booth:'D-7', desc:'簡単なスポーツ体験ができます。', floor:'3F', x:24, y:75, walk:'約1分20秒' },
-  { name:'ペット相談会', tag:'相談会', genre:'相談会', time:'12:00 - 16:00', place:'市役所2F会議室B', booth:'C-9', desc:'ペットの健康や飼育について相談できます。', floor:'2F', x:83, y:56, walk:'約1分15秒' }
+  { name:'NPOふれあい', tag:'体験・ワークショップ', genre:'体験', time:'10:00 - 12:00', place:'市役所1Fロビー', booth:'A-5', desc:'地域の交流を目的としたワークショップを行います。', floor:'1F', x:26, y:80, walk:'約30秒', startX:38, startY:84 },
+  { name:'手づくり工房', tag:'販売・体験', genre:'体験', time:'10:00 - 15:00', place:'市役所1Fロビー', booth:'B-2', desc:'手作り雑貨の販売と簡単な制作体験ができます。', floor:'1F', x:77, y:46, walk:'約40秒', startX:38, startY:84 },
+  { name:'こども未来クラブ', tag:'子ども向け', genre:'子ども向け', time:'12:00 - 15:00', place:'市役所2F多目的室', booth:'C-1', desc:'親子で参加できる楽しいイベントです。', floor:'2F', x:22, y:35, walk:'約1分', startX:47, startY:83 },
+  { name:'健康サポート町田', tag:'健康相談', genre:'相談会', time:'15:00 - 17:00', place:'市役所3F研修室', booth:'D-4', desc:'健康チェックと生活相談を行います。', floor:'3F', x:72, y:23, walk:'約1分30秒', startX:48, startY:84 },
+  { name:'シニアスマホ相談会', tag:'相談会', genre:'相談会', time:'10:00 - 16:00', place:'市役所2F会議室B', booth:'C-7', desc:'スマートフォンの使い方を丁寧にサポートします。', floor:'2F', x:61, y:19, walk:'約1分', startX:47, startY:83 },
+  { name:'防災体験ブース', tag:'防災・体験', genre:'体験', time:'10:00 - 15:00', place:'市役所1F入口付近', booth:'A-1', desc:'防災グッズや避難体験ができます。', floor:'1F', x:21, y:34, walk:'約20秒', startX:38, startY:84 },
+  { name:'まちだ音楽クラブ', tag:'音楽', genre:'音楽', time:'13:00 - 15:00', place:'市役所3Fホール', booth:'E-2', desc:'地域の音楽グループによる演奏会です。', floor:'3F', x:52, y:20, walk:'約1分20秒', startX:48, startY:84 },
+  { name:'ボランティア相談会', tag:'相談会', genre:'相談会', time:'11:00 - 16:00', place:'市役所2F会議室A', booth:'C-5', desc:'地域ボランティア活動について相談できます。', floor:'2F', x:47, y:19, walk:'約55秒', startX:47, startY:83 },
+  { name:'環境エコ展示', tag:'展示', genre:'展示', time:'10:00 - 17:00', place:'市役所3F展示室', booth:'D-1', desc:'環境保全活動やリサイクルについて紹介します。', floor:'3F', x:77, y:46, walk:'約1分10秒', startX:48, startY:84 },
+  { name:'地域交流カフェ', tag:'交流', genre:'交流', time:'10:00 - 17:00', place:'市役所3F会議室', booth:'D-5', desc:'地域住民同士が気軽に交流できるカフェです。', floor:'3F', x:25, y:53, walk:'約1分', startX:48, startY:84 },
+  { name:'英会話サークル', tag:'学習・交流', genre:'交流', time:'13:00 - 16:00', place:'市役所2F研修室', booth:'C-8', desc:'初心者向け英会話体験レッスンを行います。', floor:'2F', x:83, y:37, walk:'約1分', startX:47, startY:83 },
+  { name:'子ども工作教室', tag:'子ども向け', genre:'子ども向け', time:'10:00 - 14:00', place:'市役所2F多目的室', booth:'C-2', desc:'自由工作やクラフト作りを楽しめます。', floor:'2F', x:23, y:48, walk:'約1分10秒', startX:47, startY:83 },
+  { name:'町田歴史研究会', tag:'展示', genre:'展示', time:'10:00 - 16:00', place:'市役所3F展示室', booth:'D-6', desc:'町田の歴史資料や写真を展示しています。', floor:'3F', x:76, y:66, walk:'約1分20秒', startX:48, startY:84 },
+  { name:'スポーツ体験コーナー', tag:'体験', genre:'体験', time:'11:00 - 15:00', place:'市役所3F研修室', booth:'D-7', desc:'簡単なスポーツ体験ができます。', floor:'3F', x:24, y:75, walk:'約1分20秒', startX:48, startY:84 },
+  { name:'ペット相談会', tag:'相談会', genre:'相談会', time:'12:00 - 16:00', place:'市役所2F会議室B', booth:'C-9', desc:'ペットの健康や飼育について相談できます。', floor:'2F', x:83, y:56, walk:'約1分15秒', startX:47, startY:83 }
 ];
 
 const $ = (id) => document.getElementById(id);
@@ -21,6 +21,7 @@ const results = $('results');
 const resultCount = $('resultCount');
 const mapPin = $('mapPin');
 const boothLabel = $('boothLabel');
+const routeLine = $('routeLine');
 
 function scrollToSection(id){
   $(id).scrollIntoView({ behavior:'smooth', block:'start' });
@@ -97,6 +98,17 @@ function filterEvents(){
   scrollToSection('eventList');
 }
 
+function drawRoute(event){
+  const startX = event.startX;
+  const startY = event.startY;
+  const bendY = Math.min(84, Math.max(28, Number(event.y) + 8));
+
+  routeLine.setAttribute(
+    'points',
+    `${startX},${startY} ${startX},${bendY} ${event.x},${bendY} ${event.x},${event.y}`
+  );
+}
+
 function showMap(event, shouldScroll=false){
   $('selectedName').textContent = event.name;
   $('selectedPlace').textContent = `${event.place}（${event.booth}）`;
@@ -105,19 +117,13 @@ function showMap(event, shouldScroll=false){
   $('walkTime').textContent = event.walk;
 
   boothLabel.textContent = event.booth;
-
   $('floorImage').src = event.floor + '.png';
 
   mapPin.style.left = event.x + '%';
   mapPin.style.top = event.y + '%';
-  const startX = 38;
-  const startY = 84;
-  const bendY = Math.min(84, Math.max(32, Number(event.y) + 10));
-  
-  routeLine.setAttribute(
-    'points',
-    `${startX},${startY} ${startX},${bendY} ${event.x},${bendY} ${event.x},${event.y}`
-  );
+
+  drawRoute(event);
+
   document.querySelectorAll('#floorTabs button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.floor === event.floor);
   });
