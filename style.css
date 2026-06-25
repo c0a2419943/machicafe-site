@@ -10,12 +10,11 @@
   
   .route polyline{
     fill:none;
-    stroke:#0b5cad;
-    stroke-width:1.8;
+    stroke:#1565c0;
+    stroke-width:-15;
     stroke-linecap:round;
     stroke-linejoin:round;
-    stroke-dasharray:2 2;
-  }
+}
   
   .floor-image{
     position:relative;
@@ -23,8 +22,12 @@
   }
   
   .pin{
+    position:absolute;
+    transform:translate(-50%,-100%);
     z-index:100;
-  }
+    font-size:26px;
+    transition:all .45s ease;
+}
 
   .qr-section{
     text-align:center;
@@ -33,15 +36,6 @@
     background:#ffffff;
     border-radius:20px;
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  .qr-section{
-    text-align:center;
-    margin-top:30px;
-    padding:35px 20px;
-    background:#ffffff;
-    border-radius:24px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.08);
   }
   
   .qr-section img{
