@@ -361,7 +361,11 @@ function showMap(event, shouldScroll=false){
 
   mapPin.style.left = event.x + '%';
   mapPin.style.top = event.y + '%';
+  document.getElementById("destinationName").textContent =
+  event.name + " (" + event.booth + ")";
 
+document.getElementById("walkTimeTop").textContent =
+  event.walk;
   drawRoute(event);
 
   document.querySelectorAll('#floorTabs button').forEach(btn => {
