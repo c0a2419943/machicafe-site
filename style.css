@@ -18,7 +18,7 @@
   --radius-md:18px;
   --radius-sm:12px;
   --shadow-soft:0 10px 26px rgba(43,60,45,.10);
-  --shadow-pop:0 16px 34px rgba(30,80,57,.20);
+  --shadow-pop:0 16px 34px rgba(30,80,57,.21);
 }
 
 *{box-sizing:border-box}
